@@ -8,6 +8,10 @@
 
 A modern, high-performance, and scalable automation framework built with **Python**, **Playwright**, and **Pytest**. This framework is optimized for reliability, speed, and ease of use in any organizational environment.
 
+> [!TIP]
+> ### 📖 [Visit the Technical Wiki](file:///c:/Users/anandkuma/Desktop/PUB_PYTEST_PLAYWRITE_FRAMEWORK/WIKI.md)
+> For a deep dive into the architecture, configuration strategy, and advanced reporting features.
+
 ---
 
 ## 📑 Table of Contents
