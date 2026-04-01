@@ -1,0 +1,6 @@
+
+--- Suite Setup: Preparing global environment ---
+
+>>>> Test Setup: Starting test 'test_dashboard_header[chromium]' >>>>
+
+<<<< Test Teardown: Completed test 'test_dashboard_header[chromium]' <<<<

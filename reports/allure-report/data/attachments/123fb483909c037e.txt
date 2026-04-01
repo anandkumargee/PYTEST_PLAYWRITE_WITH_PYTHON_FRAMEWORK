@@ -1,0 +1,3 @@
+[32mINFO    [0m LoginPage:base_page.py:15 Navigating to: 
+[32mINFO    [0m LoginPage:base_page.py:52 Checking visibility of: //input[@name='username'] with timeout: 30000
+[32mINFO    [0m LoginTest:test_login_page.py:33 Successfully verified login page title.

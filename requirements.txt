@@ -1,0 +1,11 @@
+pytest
+pytest-playwright
+pytest-xdist
+allure-pytest
+pyyaml
+python-dotenv
+pytest-html
+pytest-logger
+pytest-check
+pytest-base-url
+pytest-metadata

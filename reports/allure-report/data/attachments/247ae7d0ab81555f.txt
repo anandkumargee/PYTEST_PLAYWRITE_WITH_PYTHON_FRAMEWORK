@@ -1,0 +1,10 @@
+[32mINFO    [0m DashboardTest:test_dashboard_page.py:12 Suite Setup: Performing login for dashboard tests
+[32mINFO    [0m LoginPage:base_page.py:15 Navigating to: 
+[32mINFO    [0m LoginPage:base_page.py:52 Checking visibility of: //input[@name='username'] with timeout: 30000
+[32mINFO    [0m LoginPage:login_page.py:21 Logging in with user: Admin
+[32mINFO    [0m LoginPage:base_page.py:30 Typing 'Admin' into: //input[@name='username']
+[32mINFO    [0m LoginPage:base_page.py:30 Typing 'admin123' into: //input[@name='password']
+[32mINFO    [0m LoginPage:base_page.py:21 Clicking element: //button[@type='submit']
+[32mINFO    [0m LoginPage:base_page.py:52 Checking visibility of: //a[@href="/web/index.php/dashboard/index"] with timeout: 30000
+[32mINFO    [0m DashboardPage:base_page.py:52 Checking visibility of: //h6[contains(@class, 'oxd-topbar-header-breadcrumb-module')] with timeout: 30000
+[32mINFO    [0m DashboardTest:test_dashboard_page.py:42 Successfully verified Dashboard header.

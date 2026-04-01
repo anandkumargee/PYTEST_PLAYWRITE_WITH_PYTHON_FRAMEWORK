@@ -1,0 +1,6 @@
+
+>>>> Test Setup: Starting test 'test_login_page_title[chromium]' >>>>
+
+<<<< Test Teardown: Completed test 'test_login_page_title[chromium]' <<<<
+
+--- Suite Teardown: Finalizing global environment ---

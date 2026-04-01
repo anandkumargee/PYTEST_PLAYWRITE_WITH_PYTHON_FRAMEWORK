@@ -1,0 +1,22 @@
+{
+  "qa": {
+    "base_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    "browser": "chromium",
+    "headless": false,
+    "timeout": 30000,
+    "user_credentials": {
+      "username": "Admin",
+      "password": "admin123"
+    }
+  },
+  "prod": {
+    "base_url": "https://prod-environment.example.com",
+    "browser": "chromium",
+    "headless": false,
+    "timeout": 30000,
+    "user_credentials": {
+      "username": "prod_user",
+      "password": "prod_password"
+    }
+  }
+}
