@@ -1,6 +1,0 @@
-
---- Suite Setup: Preparing global environment ---
-
->>>> Test Setup: Starting test 'test_login_with_config_data[chromium]' >>>>
-
-<<<< Test Teardown: Completed test 'test_login_with_config_data[chromium]' <<<<

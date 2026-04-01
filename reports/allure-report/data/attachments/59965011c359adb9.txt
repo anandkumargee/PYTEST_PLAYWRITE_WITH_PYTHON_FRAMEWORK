@@ -1,5 +1,0 @@
-[32mINFO    [0m DashboardPage:base_page.py:52 Checking visibility of: //button[@title='Assign Leave'] with timeout: 30000
-[32mINFO    [0m DashboardPage:base_page.py:21 Clicking element: //button[@title='Assign Leave']
-[32mINFO    [0m DashboardPage:base_page.py:52 Checking visibility of: //input[@placeholder='Type for hints...'] with timeout: 30000
-[32mINFO    [0m DashboardPage:base_page.py:30 Typing 'John Doe' into: //input[@placeholder='Type for hints...']
-[32mINFO    [0m DashboardTest:test_dashboard_page.py:51 Successfully verified Assign Leave functionality access.

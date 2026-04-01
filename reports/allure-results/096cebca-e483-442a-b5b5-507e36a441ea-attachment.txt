@@ -1,3 +1,0 @@
-2026-04-01 10:39:02,743 - LoginTest - INFO - Starting login test with ConfigManager data
-2026-04-01 10:39:02,744 - LoginTest - INFO - Attempting login for user: Admin
-2026-04-01 10:39:05,502 - LoginTest - INFO - Successfully logged in with user: Admin from config.json

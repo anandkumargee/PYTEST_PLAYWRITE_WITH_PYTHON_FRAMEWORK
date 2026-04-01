@@ -1,6 +1,0 @@
-
->>>> Test Setup: Starting test 'test_verify_all_leave_tabs[chromium]' >>>>
-
-<<<< Test Teardown: Completed test 'test_verify_all_leave_tabs[chromium]' <<<<
-
---- Suite Teardown: Finalizing global environment ---

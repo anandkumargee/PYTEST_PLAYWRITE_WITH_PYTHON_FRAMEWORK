@@ -19,17 +19,21 @@ def env_config(request):
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args, env_config):
+    # Set viewport to None only if NOT headless to allow --start-maximized to work.
+    # In headless mode, we still want a fixed high resolution.
+    is_headless = env_config.get("headless", True)
     return {
         **browser_context_args,
         "base_url": env_config.get("base_url"),
-        "viewport": {"width": 1920, "height": 1080}
+        "viewport": None if not is_headless else {"width": 1920, "height": 1080}
     }
 
 @pytest.fixture(scope="session")
 def browser_type_launch_args(browser_type_launch_args, env_config):
     return {
         **browser_type_launch_args,
-        "headless": env_config.get("headless", True)
+        "headless": env_config.get("headless", True),
+        "args": ["--start-maximized", "--window-size=1920,1080"] # Combined for perfect maximization
     }
 
 @pytest.fixture(scope="module")

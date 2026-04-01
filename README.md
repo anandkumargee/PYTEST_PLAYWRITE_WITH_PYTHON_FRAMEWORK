@@ -1,6 +1,26 @@
 # Playwright-Pytest Automation Framework
 
-A modern, high-performance, and scalable automation framework built with **Python**, **Playwright**, and **Pytest**. This framework is designed for reliability, speed, and ease of use in any organizational environment.
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Playwright](https://img.shields.io/badge/playwright-1.40%2B-green.svg)](https://playwright.dev/)
+[![Pytest](https://img.shields.io/badge/pytest-7.0%2B-yellow.svg)](https://pytest.org/)
+[![Allure](https://img.shields.io/badge/allure-2.24%2B-orange.svg)](https://docs.qameta.io/allure/)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
+
+A modern, high-performance, and scalable automation framework built with **Python**, **Playwright**, and **Pytest**. This framework is optimized for reliability, speed, and ease of use in any organizational environment.
+
+---
+
+## 📑 Table of Contents
+- [🚀 Why This Framework Over Java Selenium?](#-why-this-framework-over-java-selenium)
+- [🛠️ Prerequisites & Multi-Platform Setup](#️-prerequisites--multi-platform-setup)
+- [⚙️ Organization Setup (Adaptive Guide)](#️-organization-setup-adaptive-guide)
+- [🏗️ Project Architecture & Workflow](#️-project-architecture--workflow)
+- [📈 Running and Reporting](#-running-and-reporting)
+- [🛠️ Troubleshooting & Setup Checklist](#️-troubleshooting--setup-checklist)
+- [📁 Folder Structure](#-folder-structure)
+- [📊 Reporting & Artifacts](#-reporting--artifacts)
+- [✅ Best Practices](#-best-practices)
+- [🏷️ Keywords & Search Tags](#️-keywords--search-tags)
 
 ---
 
@@ -49,7 +69,7 @@ The Allure command-line tool is used to view the reports.
 
 1. **Clone the Project**:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/anandkumargee/PYTEST_PLAYWRITE_WITH_PYTHON_FRAMEWORK.git
    cd PUB_PYTEST_PLAYWRITE_FRAMEWORK
    ```
 
@@ -110,10 +130,10 @@ API_KEY=your_key
 Create a new file (e.g., `dashboard_page.py`) that inherits from `BasePage`:
 ```python
 class DashboardPage(BasePage):
-    LOCATOR = "//div[@id='example']"
+    HEADER = "//h6[contains(@class, 'oxd-topbar-header')]"
     
-    def my_action(self):
-        self.click(self.LOCATOR)
+    def is_header_visible(self) -> bool:
+        return self.is_visible(self.HEADER)
 ```
 
 ### 2. Add as a Fixture (`conftest.py`)
@@ -127,8 +147,8 @@ def dashboard_page(page_factory):
 ### 3. Write Your Test (`tests/`)
 Create a test file (e.g., `test_dashboard.py`) and use **Type Hinting** for IDE support:
 ```python
-def test_example(dashboard_page: DashboardPage):
-    dashboard_page.my_action()
+def test_dashboard_header(dashboard_page: DashboardPage):
+    assert dashboard_page.is_header_visible()
 ```
 
 ---
@@ -166,19 +186,31 @@ If you encounter issues during installation or execution, check the following:
 - [ ] **Execution Policy**: If `.bat` scripts are blocked on Windows, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` in PowerShell.
 - [ ] **Config Errors**: Verify that your `config/config.json` exists and is valid JSON (no missing commas or braces).
 - [ ] **Drivers**: Playwright manages its own drivers, but ensure your firewall is not blocking the downloader during `playwright install`.
+- [ ] **Env Config**: Verify `config/config.json` has the correct `base_url` for your target environment.
+- [ ] **Allure CLI**: Ensure `allure --version` works if you want to see the visual reports.
 
 ---
 
-## 📊 Reports & Artifacts
+---
+
+## 📊 Reporting & Artifacts
+
+| Report Type | Path | Description |
+| :--- | :--- | :--- |
+| **Allure Report** | `reports/allure-report/` | Interactive, trend-based report (Requires Allure CLI). |
+| **Pytest HTML** | `reports/pytest-reports/` | Single-file static HTML report. |
+| **Traces** | `reports/playwright-artifacts/` | Detailed Playwright Traces for debbuging. |
+| **Screenshots** | Attached to Allure | Captured automatically on failure. |
 
 ## 📁 Folder Structure
 
-- `config/`: Environment-specific configuration.
-- `core/`: Framework configuration and management logic.
-- `pages/`: Page Object classes (the "Logic").
-- `tests/`: Pytest test files (the "Checks").
-- `utils/`: Reusable helpers (Logging, Data Loading, Retries).
-- `reports/`: Test artifacts (Screenshots, Traces, HTML).
+- `config/`: Environment profiles (`config.json`).
+- `core/`: Framework engines and configuration managers.
+- `data/`: Test data files (JSON, CSV, etc.) for data-driven testing. 🆕
+- `pages/`: Page Object Models (POM) - UI interactions and locators.
+- `tests/`: Test suites categorized by functionality.
+- `utils/`: Common helpers (Logging, Retry logic, Excel/JSON utils).
+- `reports/`: Organized output for all test execution artifacts.
 
 ---
 
@@ -186,6 +218,12 @@ If you encounter issues during installation or execution, check the following:
 - **Use Type Hints**: Always use `: PageClassName` in test arguments to enable **<Ctrl + Click>** navigation.
 - **Avoid Hardcoding**: Put all timeouts and URLs into `config.json`.
 - **Suite Setup**: Use `scope="module"` fixtures in individual files for efficient single-session execution.
+
+---
+
+## 🏷️ Keywords & Search Tags
+For discovery and SEO, this project focuses on:
+`#PythonAutomation` `#PlaywrightTesting` `#PytestFramework` `#TestAutomationStrategy` `#WebAutomation` `#QA` `#SoftwareTesting` `#AllureReports` `#CI/CD` `#OrangeHRMAutomation`
 
 ---
 

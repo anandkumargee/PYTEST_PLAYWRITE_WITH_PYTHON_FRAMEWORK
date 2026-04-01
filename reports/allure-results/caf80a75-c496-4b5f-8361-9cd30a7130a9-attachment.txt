@@ -1,3 +1,0 @@
-[32mINFO    [0m DashboardPage:base_page.py:21 Clicking element: //a[text()='Apply']
-[32mINFO    [0m DashboardPage:base_page.py:52 Checking visibility of: //input[@placeholder='yyyy-dd-mm'] with timeout: 30000
-[32mINFO    [0m DashboardTest:test_dashboard_page.py:59 Successfully verified Assign Leave functionality access.

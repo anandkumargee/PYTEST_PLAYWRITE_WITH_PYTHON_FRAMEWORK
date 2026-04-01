@@ -1,2 +1,0 @@
-2026-04-01 10:38:50,835 - DashboardTest - INFO - Suite Setup: Performing login for dashboard tests
-2026-04-01 10:38:56,221 - DashboardTest - INFO - Successfully verified Dashboard header.
